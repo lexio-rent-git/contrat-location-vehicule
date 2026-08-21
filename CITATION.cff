@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Si vous citez cet outil, merci d'utiliser les métadonnées ci-dessous."
+title: "Générateur de contrat de location de véhicule"
+authors:
+  - name: "Lexio"
+    website: "https://lexio.rent"
+repository-code: "https://github.com/lexio-rent-git/contrat-location-vehicule"
+url: "https://lexio.rent/outils"
+version: 0.1.0
+date-released: "2026-08-21"
