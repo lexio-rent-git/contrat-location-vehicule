@@ -1,0 +1,35 @@
+{
+  "name": "@lexio/contrat-location-vehicule",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "description": "Générateur de contrat de location de véhicule (voiture, utilitaire, camion, moto, camping-car) : moteur TypeScript et clauses juridiques sourcées, pour loueurs professionnels et particuliers.",
+  "keywords": [
+    "contrat",
+    "location",
+    "vehicule",
+    "voiture",
+    "utilitaire",
+    "camion",
+    "moto",
+    "camping-car",
+    "modele",
+    "contrat-de-location",
+    "location-voiture",
+    "etat-des-lieux",
+    "loueur",
+    "juridique",
+    "france"
+  ],
+  "repository": "https://github.com/lexio-rent-git/contrat-location-vehicule",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test \"tests/**/*.test.ts\""
+  }
+}
