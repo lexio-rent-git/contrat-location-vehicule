@@ -1,6 +1,6 @@
 # Générateur de contrat de location de véhicule
 
-![Licence](https://img.shields.io/badge/licence-source--available-orange) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-15%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/modele-contrat-location-voiture)
+![Licence](https://img.shields.io/badge/licence-source--available-orange) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-22%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/modele-contrat-location-voiture)
 
 Développé et maintenu par [Lexio](https://lexio.rent), le logiciel de location de voiture et d'utilitaire pour loueurs professionnels.
 
@@ -85,6 +85,24 @@ Le présent contrat est conclu entre le Loueur, Garage Martin, SARL, dont le
 siège social ou le domicile est situé ............................, [...]
 
 et le Locataire, Jeanne Dupont, né(e) le .......... à ............, [...]
+```
+
+## En ligne de commande et avec Docker
+
+Le dépôt fournit aussi un exécutable `contrat` (`src/cli.ts`), sans dépendance :
+
+```bash
+node src/cli.ts formulaire --mode pro-conso > location.json   # formulaire vierge à compléter
+node src/cli.ts generer location.json                         # contrat complet, articles numérotés
+node src/cli.ts etat-des-lieux --type utilitaire              # fiche d'état des lieux à imprimer
+node src/cli.ts verifier                                      # contrôle les renvois entre articles
+```
+
+La même chose sans installer Node, avec l'image Docker [`lexiorent/contrat-location-vehicule`](https://hub.docker.com/r/lexiorent/contrat-location-vehicule) :
+
+```bash
+docker run --rm -i lexiorent/contrat-location-vehicule generer - < location.json
+docker run --rm lexiorent/contrat-location-vehicule etat-des-lieux --type camping-car
 ```
 
 ## API
