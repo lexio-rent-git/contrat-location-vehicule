@@ -35,6 +35,13 @@ import {
   type TypeVehicule,
 } from "./contrat-location.ts";
 
+// Sortie coupée par le lecteur (`cli … | head`) : on s'arrête proprement au lieu
+// de lever une erreur EPIPE.
+process.stdout.on("error", (e: NodeJS.ErrnoException) => {
+  if (e.code === "EPIPE") process.exit(0);
+  throw e;
+});
+
 const PAGE_CONTRAT = "https://lexio.rent/outils/modele-contrat-location-voiture";
 const PAGE_EDL = "https://lexio.rent/outils/modele-etat-des-lieux-vehicule";
 

@@ -1,6 +1,6 @@
 {
   "name": "@lexio/contrat-location-vehicule",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "type": "module",
   "license": "SEE LICENSE IN LICENSE.md",
   "description": "Générateur de contrat de location de véhicule (voiture, utilitaire, camion, moto, camping-car) : moteur TypeScript et clauses juridiques sourcées, pour loueurs professionnels et particuliers.",
